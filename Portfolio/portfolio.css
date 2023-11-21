@@ -2,6 +2,7 @@
     background-color: rgb(15, 15, 15);
     padding-bottom: 40px;
     padding-top: 40px;
+    border-color: blueviolet;
 }
 tr{
     padding-right: 100px;
@@ -19,3 +20,13 @@ a{
     text-decoration: none;
     color: gold;
 }
+div{
+    border-radius: 20px;
+    border-color: black;
+progress{
+    padding-bottom: 20px;
+    margin-bottom: 50px;
+}
+
+
+
