@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculator</title>
+         <style>
+            button{
+                height: 100px;
+                width: 100px;
+            }
+            #result{
+                height: 100px;
+                width: 410px;
+            }
+         </style>
+    </head>
+    <body>
+        <CENTER>
+            <h1>CALCULATOR</h1>
+            <table>
+                <tr>
+                    <td><input type="text" id="result" placeholder="0"></td>
+                </tr>
+                </table>
+                <table>
+                <tr>
+                <td><button onclick="display('7')">7</button></td>
+                <td><button onclick="display('8')">8</button></td>
+                <td><button onclick="display('9')">9</button></td>
+                <td><button onclick="display('+')">+</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="display('4')">4</button></td>
+                    <td><button onclick="display('5')">5</button></td>
+                    <td><button onclick="display('6')">6</button></td>
+                    <td><button onclick="display('-')">-</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="display('1')">1</button></td>
+                    <td><button onclick="display('2')">2</button></td>
+                    <td><button onclick="display('3')">3</button></td>
+                    <td><button onclick="display('*')">*</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="display('0')">0</button></td>
+                    <td><button onclick="clear('c')">c</button></td>
+                    <td><button onclick="display('/')">/</button></td>
+                    <td><button onclick="Calculate('=')">=</button></td>
+                </tr>
+            </table>
+        </CENTER>
+    </body>
+    <script>
+        var output=document.getElementById("result");
+        function display(num){
+            output.value+=num;
+        }
+        function Calculate(){
+            try{
+            output.value=eval(output.value);
+            }
+            catch{
+                alert("Invalid");
+            }
+        }
+        function clear(){
+            output.value="";
+        }
+    </script>
